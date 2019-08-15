@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Visualization Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div>
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+                    <a class="navbar-brand" href="#">Latittude</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+            
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto  navbar-right">
+                            <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Plots
+                            </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Comparison</a>
+                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Data</a>
+                        </li>
+                        </div>
+            </nav> 
+    </div>                   
+            <br>
+            <br>
+            <br>
+                    
+                        
+            <div class="card mb-3" style="max-width: 640px; height: 450px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                    <a target="_blank" href="../html_hm.github.io/Pyweather/output_data/lat_vs_temp.png">
+                    <img src="../html_hm.github.io/Pyweather/output_data/lat_vs_temp.png" class="card-img" alt="summary plot">
+                    </a>
+                    </div>
+                    <div class="col-md-6">
+                    <div class="card-body">
+                        <h5 class="card-title">Weather Summary</h5>
+                        <p class="card-text">The purpose of this roject was to analyze how weather changes as get closer to the equator. 
+                            To accomplish this analysis, we first pulled data from the OpenWeatherMapAPI to assemble dataset on over 500 cities.
+                             After assembling the dataset, we used Matplotlib to plot differente aspects of the weather vs latittude. 
+                             Factors we included were: temperature, cloudiness, wind speed and humidity.
+                            This site provides the source data and visualizations created as part of this analysis, 
+                            as well as explanations and descriptions of any trends and correlations witnessed. </p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                    </div>
+                </div>
+            </div>    
+            
+            <div class="row no-gutters">
+                    <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Visualizations</h5>
+                                <p class="card-text">Click on any plot to get more details.</p>
+                                <p class="card-text"><small class="text-muted"></small></p>
+                            </div>
+                            </div>
+                    <div class="col-md-6">
+                        <article>
+                            <a target="_blank" href="..">
+                            <img src="../html_hm.github.io/Pyweather/output_data/lat_vs_temp.png" class="card-img" alt="summary plot">
+                            </a>
+                            <br>
+                        </article>
+                        <article>
+                                <a target="_blank" href="../Project_7/RideSharingData.png">
+                                <img src="../html_hm.github.io/Pyweather/output_data/lat_vs_hum.png" class="card-img" alt="...">
+                                </a>
+                                <br>
+                        </article>
+                        <article>
+                                <a target="_blank" href="../Project_7/RideSharingData.png">
+                                <img src="../html_hm.github.io/Pyweather/output_data/lat_vs_cloud.png" class="card-img" alt="...">
+                                </a>
+                                <br>
+                        </article>
+                        <article>
+                                <a target="_blank" href="../Project_7/RideSharingData.png">
+                                <img src="../html_hm.github.io/Pyweather/output_data/lat_vs_wind.png" class="card-img" alt="...">
+                                </a>
+                                <br>
+                        </article>
+                    </div>
+                    
+                </div>
+            </div>   
+                </div>
+       
+
+    <nav class="navbar fixed-bottom navbar-light bg-light;">
+        <a class="navbar-brand" href="#">Copyright Nestor Matus 2019</a>
+    </nav>
+  
+
+   
+      
+   
+</body>
+
+</html>
