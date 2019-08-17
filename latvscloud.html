@@ -2,7 +2,6 @@
 <html lang="en-us">
 
 <head>
-
     <meta charset="UTF-8">
     <title>Weather Visualization Dashboard</title>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -23,8 +22,8 @@
 
 <body>
     <div>
-        <nav class="navbar navbar-expand-md navbar-light bg-light navbar-right">
-            <a class="navbar-brand" href="./index.html">Latittude</a>
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <a class="navbar-brand" href="./html_hm.github.io/index.html">Latittude</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -51,37 +50,7 @@
                         <a class="nav-link" href="./data.html">Data</a>
                     </li>
             </div>
-
-
-    </div>
-    </nav>
-    </div>
-
-
-    <div class="card mb-3" style="max-width: 640px; height: 450px;">
-        <div class="row no-gutters">
-            <div class="col-md-4">
-                <a target="_blank" href="../html_hm.github.io/Pyweather/output_data/lat_vs_temp.png">
-                    <img src="../html_hm.github.io/Pyweather/output_data/lat_vs_temp.png" class="card-img"
-                        alt="summary plot">
-                </a>
-            </div>
-            <div class="col-md-6">
-                <div class="card-body">
-                    <h5 class="card-title">Weather Summary</h5>
-                    <p class="card-text">The purpose of this roject was to analyze how weather changes as get closer to
-                        the equator.
-                        To accomplish this analysis, we first pulled data from the OpenWeatherMapAPI to assemble dataset
-                        on over 500 cities.
-                        After assembling the dataset, we used Matplotlib to plot differente aspects of the weather vs
-                        latittude.
-                        Factors we included were: temperature, cloudiness, wind speed and humidity.
-                        This site provides the source data and visualizations created as part of this analysis,
-                        as well as explanations and descriptions of any trends and correlations witnessed. </p>
-
-                </div>
-            </div>
-        </div>
+        </nav>
     </div>
 
     <div class="card mb-3">
@@ -89,38 +58,20 @@
             <div class="col-md-4">
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Visualizations</h5>
+                        <h5 class="card-title">Latittude vs Cloudiness</h5>
                         <p class="card-text"><small class="text-muted"></small></p>
                     </div>
                 </div>
                 <article>
-                    <a target="_blank" href="./latvstemp.html">
-                        <img src="../html_hm.github.io/Pyweather/output_data/lat_vs_temp.png" class="card-img"
-                            alt="temperature plot">
-                    </a>
-                    <br>
-                </article>
-                <article>
-                    <a target="_blank" href="./latvshum.html">
-                        <img src="../html_hm.github.io/Pyweather/output_data/lat_vs_hum.png" class="card-img"
-                            alt="humidity plot">
-                    </a>
-                    <br>
-                </article>
-                <article>
-                    <a target="_blank" href="./latvscloud.html">
+                    <a target="_blank" href="../html_hm.github.io/Pyweather/output_data/lat_vs_cloud.png">
                         <img src="../html_hm.github.io/Pyweather/output_data/lat_vs_cloud.png" class="card-img"
-                            alt="cloudiness plot">
+                            alt="vs temperature">
                     </a>
                     <br>
                 </article>
-                <article>
-                    <a target="_blank" href="./latvswind.html">
-                        <img src="../html_hm.github.io/Pyweather/output_data/lat_vs_wind.png" class="card-img"
-                            alt="wind speed plot">
-                    </a>
-                    <br>
-                </article>
+                <div class="card-body">
+                    <p class="card-text">As well, cloudiness has no direct relation with the city latitude.</p>
+                </div>
 
             </div>
         </div>
