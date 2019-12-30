@@ -1,135 +1,109 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
-<head>
+  <head>
 
     <meta charset="UTF-8">
-    <title>Weather Visualization Dashboard</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-<body>
-    <div>
-        <nav class="navbar navbar-expand-md navbar-light bg-light navbar-right">
-            <a class="navbar-brand" href="./index.html">Latittude</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+    <title>Bootstrap Visualization Dashboard</title>
+
+    <!-- Boostrap Stylesheet -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" media="screen">
+
+    <!-- Our own CSS stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css" media="screen">
+
+  </head>
+
+  <body>
+    <!-- Start of navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid navbar-custom">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="row">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle Navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
             </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto  navbar-right">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Plots
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="./latvstemp.html">Temperature</a>
-                            <a class="dropdown-item" href="./latvshum.html">Humidity</a>
-                            <a class="dropdown-item" href="latvscloud.html">Cloudiness</a>
-                            <a class="dropdown-item" href="latvswind.html">Wind Speed</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./comparison.html">Comparison</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./data.html">Data</a>
-                    </li>
+            <div class="col-xs-9 phone-nav">
+              <a class="navbar-brand" href="#" id="logo">Lattitude</a>
             </div>
+          </div>
 
-
-    </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right navbar-right-custom">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                 <li><a href="visualizations/temp.html">Max Temperature</a></li>
+                  <li><a href="visualizations/humidity.html">Humidity</a></li>
+                  <li><a href="visualizations/cloudiness.html">Cloudiness</a></li>
+                  <li><a href="visualizations/wind.html">Wind Speed</a></li>
+                </ul>
+              </li>
+              <li><a href="comparison.html">Comparison</a></li>
+              <li><a href="data.html">Data</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div>
+      </div><!-- /.container-fluid -->
     </nav>
-    </div>
+    <!-- End of navbar -->
 
-
-    <div class="card mb-3" style="max-width: 640px; height: 450px;">
-        <div class="row no-gutters">
-            <div class="col-md-4">
-                <a target="_blank" href="../html_hm.github.io/Pyweather/output_data/lat_vs_temp.png">
-                    <img src="../html_hm.github.io/Pyweather/output_data/lat_vs_temp.png" class="card-img"
-                        alt="summary plot">
-                </a>
-            </div>
-            <div class="col-md-6">
-                <div class="card-body">
-                    <h5 class="card-title">Weather Summary</h5>
-                    <p class="card-text">The purpose of this roject was to analyze how weather changes as get closer to
-                        the equator.
-                        To accomplish this analysis, we first pulled data from the OpenWeatherMapAPI to assemble dataset
-                        on over 500 cities.
-                        After assembling the dataset, we used Matplotlib to plot differente aspects of the weather vs
-                        latittude.
-                        Factors we included were: temperature, cloudiness, wind speed and humidity.
-                        This site provides the source data and visualizations created as part of this analysis,
-                        as well as explanations and descriptions of any trends and correlations witnessed. </p>
-
-                </div>
-            </div>
+    <!-- Start of container -->
+    <div class="container">
+      <section class="row">
+        <div class="col-md-8">
+          <article class="description-content">
+            <h1 class="description-header">Summary: Latitude vs. X</h1>
+            <hr class="description-hr"/>
+            <img src="assets/images/Fig1.png" alt="" id="description-image"/>
+            <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
+            <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+          </article>
         </div>
-    </div>
+        <div class="col-md-4">
 
-    <div class="card mb-3">
-        <div class="row no-gutters">
-            <div class="col-md-4">
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Visualizations</h5>
-                        <p class="card-text"><small class="text-muted"></small></p>
-                    </div>
-                </div>
-                <article>
-                    <a target="_blank" href="./latvstemp.html">
-                        <img src="../html_hm.github.io/Pyweather/output_data/lat_vs_temp.png" class="card-img"
-                            alt="temperature plot">
-                    </a>
-                    <br>
-                </article>
-                <article>
-                    <a target="_blank" href="./latvshum.html">
-                        <img src="../html_hm.github.io/Pyweather/output_data/lat_vs_hum.png" class="card-img"
-                            alt="humidity plot">
-                    </a>
-                    <br>
-                </article>
-                <article>
-                    <a target="_blank" href="./latvscloud.html">
-                        <img src="../html_hm.github.io/Pyweather/output_data/lat_vs_cloud.png" class="card-img"
-                            alt="cloudiness plot">
-                    </a>
-                    <br>
-                </article>
-                <article>
-                    <a target="_blank" href="./latvswind.html">
-                        <img src="../html_hm.github.io/Pyweather/output_data/lat_vs_wind.png" class="card-img"
-                            alt="wind speed plot">
-                    </a>
-                    <br>
-                </article>
-
+          <!-- Start of Visualizations imageNav Area -->
+          <section id="imageNav-area">
+            <div class="imageNav-content">
+              <h2 class="imageNav-header">Visualizations</h2>
+              <hr />
+              <div id="images">
+                <a href="visualizations/temp.html"><img src="assets/images/Fig1.png" alt="Latitude vs. Max Temperature" class="imageNav-photo"></a>
+                <a href="visualizations/humidity.html"><img src="assets/images/Fig2.png" alt="Latitude vs. Humidity" class="imageNav-photo"></a>
+                <a href="visualizations/cloudiness.html"><img src="assets/images/Fig3.png" alt="Latitude vs. Cloudiness" class="imageNav-photo"></a>
+                <a href="visualizations/wind.html"><img src="assets/images/Fig4.png" alt="Latitude vs. Wind Speed" class="imageNav-photo"></a>
+              </div>
             </div>
+          </section>
+          <!-- End of the Visualizations imageNav Area -->
+
         </div>
+      </section>
+    </div>
+    <!-- End of container -->
 
+    <!-- Start of footer -->
+    <footer class="footer navbar-fixed-bottom">
+      <div class="two-toned-footer-color"></div>
+      <p class="text-muted text-muted-footer text-center">
+        &copy; Copyright Coding Bootcamp 2017
+      </p>
+    </footer>
+    <!-- End of footer -->
 
-        <footer>
-            <div class="footer">Copyright Nestor Matus 2019</div>
-        </footer>
+    <!-- jQuery CDN -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-</body>
+    <!-- Bootstrap CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
 
 </html>
